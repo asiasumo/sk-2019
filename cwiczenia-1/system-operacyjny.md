@@ -7,7 +7,7 @@ Charakterystyka systemu operacyjnego
 | Charakterystyka | wartość           | komentarzu |
 | ------------- |:-------------:| -----:|
 | nazwa      |Linux | Ubuntu |
-| program (parametry sieci)      |nmcli device show in terminal |  |
+| program (parametry sieci)      |terminal |nmcli device show   |
 
 
 Konfiguracja połączenia sieciowego
