@@ -84,11 +84,11 @@ Nowa statyczna konfiguracja
 -------------------------
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
-|   PC 1 |  
+|   PC 1 |  Linux Debian 
 | IP - address  |  | |
 | MASKA  |  | |
 |   |  | |
-| PC 2  |  | |
+| PC 2  | Linux Debian | |
 | IP - address  |  | |
 | MASKA  |  | |
 
@@ -101,6 +101,8 @@ Polecenie
 Efekt
 ```
 ```
+
+1. 
 
 Warto wiedzieć
 --------------
