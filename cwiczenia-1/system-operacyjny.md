@@ -24,4 +24,4 @@ Konfiguracja połączenia sieciowego
 Schemat sieci
 -------------
 
-(MASZYNA.png)
+![alt schemat](MASZYNA.png)
