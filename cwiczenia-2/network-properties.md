@@ -49,22 +49,24 @@ Wejściowe parametry sieci
 -------------------------
 | Parametr | wartość | komentarz(opcionalny) |
 | ------------- |:-------------:| -----:|
-|   PC 1 |  
+|   PC 1 |  Linux Debian
 | IP - address  | 192.168.10.10 | |
-| MASKA  | 255.255.255.0 | |
+| MASKA  | 255.255.255.0 | /24|
 |   |  | |
-| PC 2  |  | |
+| PC 2  | Linux Debian | |
 | IP - address  | 172.16.100.100 | |
-| MASKA  | 255.255.0.0 | |
+| MASKA  | 255.255.0.0 |/16|
 
 Weryfikacja połączenia
 
 Polecenie
 ```
+ping adres_ip 
 ```
 
 Efekt
 ```
+sprawdzi czy maszyny się widzą - w tym wypadku, przy tych konkretnych ustawieniach maszyny się nie zobaczą bo są w innych sieciach(maski są inne a więc inne podsieci). 
 ```
 
 1. Stworzyć sieć NAT
