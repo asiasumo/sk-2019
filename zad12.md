@@ -50,7 +50,7 @@ ZADANIE 12
   
   ### Diagram:
   ---
-  ![diagram](siec.png)
+  ![diagram](siec.jpg)
   
   
   
