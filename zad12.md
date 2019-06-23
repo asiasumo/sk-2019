@@ -3,11 +3,11 @@ ZADANIE 12
 --- 
 
 
-* Wi-Fi``192.168.0.0/22``
+* Wi-Fi ``192.168.0.0/22``
 
 
 * LAN  np. ``10.0.9.0/26``
- * /26 = 62 hostów
+   * /26 = 62 hostów
   
   
 #### Przydział adresów:
@@ -50,7 +50,7 @@ ZADANIE 12
   
   ### Diagram:
   ---
-  ![diagram](sieci.png)
+  ![diagram](siec.png)
   
   
   
