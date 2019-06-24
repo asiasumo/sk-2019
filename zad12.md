@@ -121,9 +121,11 @@ subnet 192.168.0.0. netmask 255.255.252.0{
 ### LAN
 ---
 
-
+|KARTA   |adres ip    |
+|------- |------------| 
 |enp0s3  |10.0.0.2/8  |
 |enp0s8  |10.0.9.62/26|
+
 +  plus karty sieciowe na komputery 
 
 ``ip route add default via 10.0.0.1 dev enp0s3``
@@ -133,6 +135,8 @@ subnet 192.168.0.0. netmask 255.255.252.0{
 ### Komputer w sali 
 ---
 
+|KARTA   |adres ip   |
+|------- |---------- | 
 |enp0s3  |10.0.9.1/26|
 
 ``ip route add default via 10.0.9.62 dev enp0s3``
