@@ -103,13 +103,13 @@ ZADANIE 12
 
 ### DODAJ:
 
-``subnet 192.168.0.0. netmask 255.255.252.0{
+subnet 192.168.0.0. netmask 255.255.252.0{
 
        option routers 192.168.0.1;
        
        range 192.168.0.2 192.168.3.254;
        
-}``
+}
 
 
 
@@ -123,7 +123,7 @@ ZADANIE 12
 |enp0s8  |10.0.9.62/26|
 +  plus karty sieciowe na komputery 
 
-``ip route add default via 172.16.120.1 dev enp0s3``
+``ip route add default via 10.0.0.1 dev enp0s3``
 
 
 
