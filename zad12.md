@@ -93,16 +93,16 @@ ZADANIE 12
 
 ### DHCP DLA WIFI: 
 
-``apt-get install isc-dhcp-server
+``apt-get install isc-dhcp-server``
 
-  systemctl start isc-dhcp-server``
+ ``systemctl start isc-dhcp-server``
 
 
 ### w:
 
-``/etc/default/isc-dhcp-server
+``/etc/default/isc-dhcp-server``
 
-/etc/dhcp/dhcpd.conf``
+``/etc/dhcp/dhcpd.conf``
 
 ### DODAJ:
 
