@@ -81,35 +81,35 @@ ZADANIE 12
 
 ``ip route add default via 10.0.0.1 dev enp0s3``
 
---------
+
 
 ``iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -o enp0s3 -j MASQUERADE``
 
 ``iptables -t nat -A POSTROUTING -s 192.168.0.0/22 -o enp0s3 -j MASQUERADE``
 
--------
-DHCP DLA WIFI: 
+
+### DHCP DLA WIFI: 
 
 ``apt-get install isc-dhcp-server
 
   systemctl start isc-dhcp-server``
 
 
-w:
+### w:
 
 ``/etc/default/isc-dhcp-server
 
 /etc/dhcp/dhcpd.conf``
 
-DODAJ:
+### DODAJ:
 
-subnet 192.168.0.0. netmask 255.255.252.0{
+``subnet 192.168.0.0. netmask 255.255.252.0{
 
        option routers 192.168.0.1;
        
        range 192.168.0.2 192.168.3.254;
        
-}
+}``
 
 
 
