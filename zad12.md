@@ -81,6 +81,8 @@ enp0s10: 188.156.220.162/27
 ip route add default via 10.0.0.1
 
 
+iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -o  -j MASQUERADE
+
 
 
 
