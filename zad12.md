@@ -45,7 +45,7 @@ ZADANIE 12
     * ``10.0.204.0/26``
   Po 35 komputerów w każdej sali co daje nam 140 komputerów na pięrze 2.
   
-  Czyli łącznie 3 x 140 komputerów  = 420 komputerów
+  3 x 140 komputerów  = 420 komputerów
   
   
   ### Diagram:
@@ -60,56 +60,28 @@ ZADANIE 12
 
 ### Routing
 ---
-``ip route add default via 10.0.9.1``  
-``ip route add default via 10.0.115.1``  
-``ip route add default via 10.0.201.1``  
-
+``ip route add default via {ip}`` 
 
 ### Masquerade
 ---
-#### Serwer główny
-``sudo iptables -t nat -A POSTROUTING -s 188.156.220.160/28 -o enp0s3 -j MASQUERADE``  
-``sudo iptables -t nat -A POSTROUTING -s 188.156.220.176/28 -o enp0s3 -j MASQUERADE``  
-``sudo iptables-save | sudo tee /etc/iptables.sav``  
-
-### DHCP
+``iptables -t nat -A POSTROUTING -s {ip sieci} -o {interfejs} -j MASQUERADE``
+  
+### Karty sieciowe ip
 ---
-``Instalacja DHCP: apt install isc-dhcp-server``  
-``Odkomentowujemy: config DHCPDv4_CONF``    
+``ip a add {ip} dev {interfejs}`` 
 
-### SALE
+
+### MAIN
 ---
-```
-subnet 10.0.9.0 netmask 255.255.252.192 {
-        option routers                  10.0.9.1;
-        option subnet-mask              255.255.252.192;
-        option domain-name-servers      10.0.9.1;
-        range                           10.0.9.2 10.0.9.62;
-}
+enp0s3: NAT
+enp0s8: 10.0.0.1/8
+enp0s9: 192.168.0.1/22
+enp0s10: 188.156.220.162/27
 
-subnet 10.0.115.0 netmask 255.255.252.192 {
-        option routers                  10.0.115.1;
-        option subnet-mask              255.255.252.192;
-        option domain-name-servers      10.0.115.1;
-        range                           10.0.115.2 10.0.115.62;
-}
+ip route add default via 10.0.0.1
 
-subnet 10.0.201.0 netmask 255.255.252.192 {
-        option routers                  10.0.201.1;
-        option subnet-mask              255.255.252.192;
-        option domain-name-servers      10.0.201.1;
-        range                           10.0.201.2 10.0.201.62;
-}
 
-```
 
-### Wi-Fi
----
-```
-subnet 10.10.0.0 netmask 255.255.252.0 {
-        option routers                  11.0.0.1;
-        option subnet-mask              255.255.252.0;
-        option domain-name-servers      11.0.0.1;
-        range                           11.0.0.15 11.0.3.250;
-}
-```
+
+
+
