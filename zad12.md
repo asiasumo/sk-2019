@@ -57,6 +57,7 @@ ZADANIE 12
 ### IP Forwarding
 ---
 ``echo 1 >/proc/sys/net/ipv4/ip_forward``
+ w ``/etc/sysctl.conf`` odkomenować linijke
 
 ### Routing
 ---
