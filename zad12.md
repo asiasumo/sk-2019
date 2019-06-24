@@ -78,27 +78,27 @@ ZADANIE 12
 |enp0s9  |192.168.0.1/22    |
 |enp0s10:|188.156.220.162/27|
 
-ip route add default via 10.0.0.1 dev enp0s3
+``ip route add default via 10.0.0.1 dev enp0s3``
 
 --------
 
-iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -o enp0s3 -j MASQUERADE
+``iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -o enp0s3 -j MASQUERADE``
 
-iptables -t nat -A POSTROUTING -s 192.168.0.0/22 -o enp0s3 -j MASQUERADE
+``iptables -t nat -A POSTROUTING -s 192.168.0.0/22 -o enp0s3 -j MASQUERADE``
 
 -------
 DHCP DLA WIFI: 
 
-apt-get install isc-dhcp-server
+``apt-get install isc-dhcp-server
 
-systemctl start isc-dhcp-server
+  systemctl start isc-dhcp-server``
 
 
 w:
 
-/etc/default/isc-dhcp-server
+``/etc/default/isc-dhcp-server
 
-/etc/dhcp/dhcpd.conf
+/etc/dhcp/dhcpd.conf``
 
 DODAJ:
 
@@ -122,7 +122,7 @@ subnet 192.168.0.0. netmask 255.255.252.0{
 |enp0s8  |10.0.9.62/26|
 + karty sieciowe na komputery 
 
-ip route add default via 172.16.120.1 dev enp0s3
+``ip route add default via 172.16.120.1 dev enp0s3``
 
 
 
@@ -131,8 +131,8 @@ ip route add default via 172.16.120.1 dev enp0s3
 
 |enp0s3  |10.0.9.1/26|
 
-ip route add default via 10.0.9.62 dev enp0s3
+``ip route add default via 10.0.9.62 dev enp0s3``
 
-w /etc/network/interfaces nalozyc statyczne ip
+w ``/etc/network/interfaces`` nalozyc statyczne ip
 
 
