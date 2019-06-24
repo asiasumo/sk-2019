@@ -74,7 +74,6 @@ ZADANIE 12
 ### MAIN
 ---
 |enp0s3  |NAT               |
-|--------|------------------|
 |enp0s8  |10.0.0.1/8        |
 |enp0s9  |192.168.0.1/22    |
 |enp0s10:|188.156.220.162/27|
@@ -93,15 +92,22 @@ DHCP DLA WIFI:
 apt-get install isc-dhcp-server
 
 systemctl start isc-dhcp-server
+
+
 w:
 
 /etc/default/isc-dhcp-server
 
 /etc/dhcp/dhcpd.conf
+
 DODAJ:
+
 subnet 192.168.0.0. netmask 255.255.252.0{
+
        option routers 192.168.0.1;
+       
        range 192.168.0.2 192.168.3.254;
+       
 }
 
 
@@ -112,8 +118,8 @@ subnet 192.168.0.0. netmask 255.255.252.0{
 ---
 
 
-enp0s3: 10.0.0.2/8
-enp0s8: 10.0.9.62/26
+|enp0s3  |10.0.0.2/8  |
+|enp0s8  |10.0.9.62/26|
 + karty sieciowe na komputery 
 
 ip route add default via 172.16.120.1 dev enp0s3
@@ -123,7 +129,7 @@ ip route add default via 172.16.120.1 dev enp0s3
 ### Komputer w sali 
 ---
 
-enp0s3:  10.0.9.1/26
+|enp0s3  |10.0.9.1/26|
 
 ip route add default via 10.0.9.62 dev enp0s3
 
