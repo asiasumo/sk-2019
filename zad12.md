@@ -121,7 +121,7 @@ subnet 192.168.0.0. netmask 255.255.252.0{
 
 |enp0s3  |10.0.0.2/8  |
 |enp0s8  |10.0.9.62/26|
-+ karty sieciowe na komputery 
++  plus karty sieciowe na komputery 
 
 ``ip route add default via 172.16.120.1 dev enp0s3``
 
@@ -134,6 +134,6 @@ subnet 192.168.0.0. netmask 255.255.252.0{
 
 ``ip route add default via 10.0.9.62 dev enp0s3``
 
-w ``/etc/network/interfaces`` nalozyc statyczne ip
+w ``/etc/network/interfaces`` nałożyć statyczne ip
 
 
