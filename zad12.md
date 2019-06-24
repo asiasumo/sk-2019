@@ -74,10 +74,13 @@ ZADANIE 12
 
 ### MAIN
 ---
+|KARTA   |adres ip          |
+|------- |----------------- | 
 |enp0s3  |NAT               |
 |enp0s8  |10.0.0.1/8        |
 |enp0s9  |192.168.0.1/22    |
 |enp0s10:|188.156.220.162/27|
+
 
 ``ip route add default via 10.0.0.1 dev enp0s3``
 
